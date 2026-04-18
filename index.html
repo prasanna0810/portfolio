@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prasanna Devika &mdash; Biomedical Engineer & AI Researcher</title>
+  <meta name="description"
+    content="Portfolio of Prasanna Devika  &mdash; Biomedical Engineer with GATE AIR 44, AI Researcher, and UI Designer bridging engineering, life sciences, and technology." />
+  <meta property="og:title" content="Prasanna Devika  &mdash; Biomedical Engineer" />
+  <meta property="og:description"
+    content="GATE AIR 44 | Biomedical Engineering | AI/ML | Medical Device R&D | Web Development" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide icons for professional UI -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- Neural Mesh Background -->
+  <canvas id="neural-mesh-canvas"></canvas>
+  <div id="mesh-container"></div>
+  <div class="grain-overlay" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+      <filter id="grain-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch" />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+    </svg>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-spacer"></div>
+      <div class="nav-links" role="navigation">
+        <a href="#hero" class="nav-link" data-section="hero">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-socials">
+          <a href="https://github.com/prasanna0810" target="_blank" class="nav-social-link" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/prasanna-devika-8199a7273" target="_blank" class="nav-social-link"
+            aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#certifications" class="mobile-nav-link">Certifications</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-nebula" aria-hidden="true">
+      <div class="nebula-left"></div>
+      <div class="nebula-right"></div>
+    </div>
+    <!-- ===== HERO RIGHT PANEL &mdash; Authentic Field Instruments ===== -->
+    <div class="hero-right-panel" aria-hidden="true">
+      <div class="hrp-dot-field"></div>
+
+      <!-- â•â• Window 1: Pure Tone Audiogram (actual RPi Audiometer project) â•â• -->
+      <div class="hrp-win hrp-win-audio">
+        <div class="hrp-titlebar">
+          <div class="hrp-tb-dots">
+            <span class="hrp-dot-r"></span><span class="hrp-dot-y"></span><span class="hrp-dot-g"></span>
+          </div>
+          <span class="hrp-tb-title">PURE TONE AUDIOGRAM &middot; FDA 510(k)</span>
+          <span class="hrp-tb-live"><span class="hrp-pulse-dot"></span>TESTING</span>
+        </div>
+        <div class="hrp-audio-stage">
+          <svg viewBox="0 0 290 170" class="hrp-audio-svg">
+            <defs>
+              <filter id="auSweepGlow">
+                <feGaussianBlur stdDeviation="2" result="b" />
+                <feMerge>
+                  <feMergeNode in="b" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Normal hearing zone shading (0-25 dBHL) -->
+            <rect class="hrp-audio-normal-zone" x="34" y="18" width="232" height="35" rx="2" />
+            <text class="hrp-audio-zone-lbl" x="186" y="30">NORMAL RANGE</text>
+
+            <!-- Horizontal grid lines (dB levels) -->
+            <line class="hrp-audio-grid" x1="34" y1="18" x2="266" y2="18" />
+            <line class="hrp-audio-grid" x1="34" y1="32" x2="266" y2="32" />
+            <line class="hrp-audio-grid" x1="34" y1="46" x2="266" y2="46" />
+            <line class="hrp-audio-grid hrp-audio-thresh" x1="34" y1="53" x2="266" y2="53" />
+            <line class="hrp-audio-grid" x1="34" y1="60" x2="266" y2="60" />
+            <line class="hrp-audio-grid" x1="34" y1="74" x2="266" y2="74" />
+            <line class="hrp-audio-grid" x1="34" y1="88" x2="266" y2="88" />
+            <line class="hrp-audio-grid" x1="34" y1="102" x2="266" y2="102" />
+            <line class="hrp-audio-grid" x1="34" y1="116" x2="266" y2="116" />
+            <line class="hrp-audio-grid" x1="34" y1="130" x2="266" y2="130" />
+
+            <!-- Vertical grid (frequencies) -->
+            <line class="hrp-audio-grid" x1="34" y1="10" x2="34" y2="142" />
+            <line class="hrp-audio-grid" x1="80" y1="10" x2="80" y2="142" />
+            <line class="hrp-audio-grid" x1="126" y1="10" x2="126" y2="142" />
+            <line class="hrp-audio-grid" x1="172" y1="10" x2="172" y2="142" />
+            <line class="hrp-audio-grid" x1="218" y1="10" x2="218" y2="142" />
+            <line class="hrp-audio-grid" x1="266" y1="10" x2="266" y2="142" />
+
+            <!-- Y-axis labels (dBHL) -->
+            <text class="hrp-audio-ax" x="28" y="21" text-anchor="end">0</text>
+            <text class="hrp-audio-ax" x="28" y="35" text-anchor="end">10</text>
+            <text class="hrp-audio-ax" x="28" y="49" text-anchor="end">20</text>
+            <text class="hrp-audio-ax" x="28" y="63" text-anchor="end">30</text>
+            <text class="hrp-audio-ax" x="28" y="77" text-anchor="end">40</text>
+            <text class="hrp-audio-ax" x="28" y="91" text-anchor="end">50</text>
+            <text class="hrp-audio-ax" x="28" y="105" text-anchor="end">60</text>
+            <text class="hrp-audio-ax" x="28" y="119" text-anchor="end">70</text>
+            <text class="hrp-audio-ax" x="28" y="133" text-anchor="end">80</text>
+            <text class="hrp-audio-unit" x="8" y="80" transform="rotate(-90 8 80)">dB HL</text>
+
+            <!-- X-axis labels (Frequency) -->
+            <text class="hrp-audio-fx" x="34" y="153" text-anchor="middle">250</text>
+            <text class="hrp-audio-fx" x="80" y="153" text-anchor="middle">500</text>
+            <text class="hrp-audio-fx" x="126" y="153" text-anchor="middle">1k</text>
+            <text class="hrp-audio-fx" x="172" y="153" text-anchor="middle">2k</text>
+            <text class="hrp-audio-fx" x="218" y="153" text-anchor="middle">4k</text>
+            <text class="hrp-audio-fx" x="266" y="153" text-anchor="middle">8k</text>
+            <text class="hrp-audio-unit" x="150" y="165" text-anchor="middle">Frequency (Hz)</text>
+
+            <!-- Right ear line (red) &mdash; values: 10,15,20,15,25,30 dBHL -->
+            <polyline class="hrp-audio-r-line" points="34,32 80,39 126,46 172,39 218,53 266,60" />
+            <circle class="hrp-audio-r-mkr" cx="34" cy="32" r="4" style="--dk:0s" />
+            <circle class="hrp-audio-r-mkr" cx="80" cy="39" r="4" style="--dk:0.3s" />
+            <circle class="hrp-audio-r-mkr" cx="126" cy="46" r="4" style="--dk:0.6s" />
+            <circle class="hrp-audio-r-mkr" cx="172" cy="39" r="4" style="--dk:0.9s" />
+            <circle class="hrp-audio-r-mkr" cx="218" cy="53" r="4" style="--dk:1.2s" />
+            <circle class="hrp-audio-r-mkr" cx="266" cy="60" r="4" style="--dk:1.5s" />
+
+            <!-- Left ear line (teal) &mdash; values: 15,20,25,20,35,40 dBHL -->
+            <polyline class="hrp-audio-l-line" points="34,39 80,46 126,53 172,46 218,67 266,74" />
+            <text class="hrp-audio-l-mkr" x="34" y="43" style="--dk:0.15s">&times;</text>
+            <text class="hrp-audio-l-mkr" x="80" y="50" style="--dk:0.45s">&times;</text>
+            <text class="hrp-audio-l-mkr" x="126" y="57" style="--dk:0.75s">&times;</text>
+            <text class="hrp-audio-l-mkr" x="172" y="50" style="--dk:1.05s">&times;</text>
+            <text class="hrp-audio-l-mkr" x="218" y="71" style="--dk:1.35s">&times;</text>
+            <text class="hrp-audio-l-mkr" x="266" y="78" style="--dk:1.65s">&times;</text>
+
+            <!-- Active sweep line at 1kHz -->
+            <line class="hrp-audio-sweep" x1="126" y1="10" x2="126" y2="142" filter="url(#auSweepGlow)" />
+            <!-- Active test dot pulsing at 1kHz right-ear point -->
+            <circle class="hrp-audio-active-dot" cx="126" cy="46" r="8" filter="url(#auSweepGlow)" />
+          </svg>
+          <!-- Legend -->
+          <div class="hrp-audio-legend">
+            <span class="hrp-al hrp-al-r"><span class="hrp-al-symbol">&cir;</span> Right ear</span>
+            <span class="hrp-al hrp-al-l"><span class="hrp-al-symbol">&times;</span> Left ear</span>
+            <span class="hrp-al">Ref: ANSI S3.6</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- == Window 2: Bio-Signal Oscilloscope (Signal Processing / IIT Madras) == -->
+      <div class="hrp-win hrp-win-scope" style="top: 55%; right: 2%;">
+        <div class="hrp-titlebar">
+          <div class="hrp-tb-dots">
+            <span class="hrp-dot-r"></span><span class="hrp-dot-y"></span><span class="hrp-dot-g"></span>
+          </div>
+          <span class="hrp-tb-title">BIO-SIGNAL ANALYSER &middot; CH1</span>
+          <span class="hrp-scope-mode">ECG &middot; 25mm/s</span>
+        </div>
+        <div class="hrp-scope-stage">
+          <!-- Phosphor grid -->
+          <div class="hrp-scope-grid"></div>
+          <svg viewBox="0 0 260 80" class="hrp-scope-svg" preserveAspectRatio="none">
+            <defs>
+              <filter id="phosphor">
+                <feGaussianBlur stdDeviation="1.2" result="b" />
+                <feMerge>
+                  <feMergeNode in="b" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- ECG waveform trace (one heartbeat cycle &times; 3) -->
+            <polyline class="hrp-scope-trace"
+              points="0,40 14,40 18,38 22,42 26,40 34,40 36,20 38,5  40,55 42,40 56,40 58,37 62,43 66,40 80,40 82,20 84,5  86,55 88,40 102,40 104,38 108,42 112,40 120,40 122,20 124,5 126,55 128,40 142,40 144,38 148,42 152,40 160,40 162,20 164,5 166,55 168,40 182,40 184,38 188,42 192,40 200,40 202,20 204,5 206,55 208,40 222,40 224,38 228,42 232,40 240,40 242,20 244,5 246,55 248,40 260,40"
+              filter="url(#phosphor)" />
+          </svg>
+          <!-- Measurement readouts -->
+          <div class="hrp-scope-reads">
+            <div class="hrp-scope-read">
+              <div class="hrp-scope-read-val hrp-sr-green">72</div>
+              <div class="hrp-scope-read-lbl">BPM</div>
+            </div>
+            <div class="hrp-scope-divider"></div>
+            <div class="hrp-scope-read">
+              <div class="hrp-scope-read-val">1.2</div>
+              <div class="hrp-scope-read-lbl">mV/div</div>
+            </div>
+            <div class="hrp-scope-divider"></div>
+            <div class="hrp-scope-read">
+              <div class="hrp-scope-read-val hrp-sr-teal">0.82</div>
+              <div class="hrp-scope-read-lbl">QRS s</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- == Window 3: Web Design Canvas (FASMI + UI/UX work) == -->
+      <div class="hrp-win hrp-win-design" style="top: 74%; left: 2%;">
+        <div class="hrp-titlebar">
+          <div class="hrp-tb-dots">
+            <span class="hrp-dot-r"></span><span class="hrp-dot-y"></span><span class="hrp-dot-g"></span>
+          </div>
+          <span class="hrp-tb-title">DESIGN STUDIO &middot; FIGMA &rarr; HTML</span>
+          <span class="hrp-zoom-chip">75%</span>
+        </div>
+        <div class="hrp-design-body">
+          <!-- Ruler -->
+          <div class="hrp-ruler-h"><span>0</span><span>120</span><span>240</span><span>360</span></div>
+          <div class="hrp-ruler-v"><span>0</span><span>40</span><span>80</span></div>
+          <!-- Artboard -->
+          <div class="hrp-artboard-wrap">
+            <!-- Simplified website wireframe (like FASMI) -->
+            <div class="hrp-wireframe">
+              <!-- Nav bar -->
+              <div class="hrp-wf-nav">
+                <div class="hrp-wf-logo"></div>
+                <div class="hrp-wf-nav-links">
+                  <div class="hrp-wf-nl"></div>
+                  <div class="hrp-wf-nl"></div>
+                  <div class="hrp-wf-nl"></div>
+                </div>
+              </div>
+              <!-- Hero band -->
+              <div class="hrp-wf-hero">
+                <div class="hrp-wf-hero-h"></div>
+                <div class="hrp-wf-hero-sub"></div>
+                <div class="hrp-wf-btn"></div>
+              </div>
+              <!-- Card row -->
+              <div class="hrp-wf-cards">
+                <div class="hrp-wf-card"></div>
+                <div class="hrp-wf-card hrp-wf-card-accent"></div>
+                <div class="hrp-wf-card"></div>
+              </div>
+            </div>
+            <!-- Figma selection handles on the hero band -->
+            <div class="hrp-sel-box hrp-sel-hero">
+              <span class="hrp-sel-corner hrp-sc-tl"></span>
+              <span class="hrp-sel-corner hrp-sc-tr"></span>
+              <span class="hrp-sel-corner hrp-sc-bl"></span>
+              <span class="hrp-sel-corner hrp-sc-br"></span>
+            </div>
+          </div>
+          <!-- Design tokens row -->
+          <div class="hrp-design-tokens">
+            <div class="hrp-token-swatch" style="background:oklch(0.72 0.16 200)"></div>
+            <div class="hrp-token-swatch" style="background:oklch(0.65 0.20 290)"></div>
+            <div class="hrp-token-swatch" style="background:oklch(0.75 0.18 75)"></div>
+            <div class="hrp-token-swatch" style="background:oklch(0.68 0.18 145)"></div>
+            <div class="hrp-token-swatch" style="background:oklch(0.08 0.02 220)"></div>
+            <div class="hrp-design-token-lbl">Satoshi &middot; Bebas Neue</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating project badges -->
+      <div class="hrp-fbadge hrp-fb-1"> FDA 510(k) &middot; Raspb. Pi</div>
+      <div class="hrp-fbadge hrp-fb-2">TensorFlow &middot; Flask API</div>
+      <div class="hrp-fbadge hrp-fb-3">GitHub Pages &middot; Figma </div>
+    </div>
+
+
+
+
+    <div class="hrp-titlebar">
+
+
+    </div>
+
+
+    <div class="dna-helix-wrap" aria-hidden="true">
+      <svg class="dna-svg" viewBox="0 0 60 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,10 Q50,35 10,60 Q50,85 10,110 Q50,135 10,160 Q50,185 10,210" stroke="oklch(0.65 0.16 195 / 0.45)"
+          stroke-width="1.5" fill="none" />
+        <path d="M50,10 Q10,35 50,60 Q10,85 50,110 Q10,135 50,160 Q10,185 50,210" stroke="oklch(0.55 0.14 290 / 0.35)"
+          stroke-width="1.5" fill="none" />
+        <circle cx="10" cy="10" r="3" fill="oklch(0.72 0.16 200 / 0.8)" />
+        <circle cx="50" cy="35" r="2" fill="oklch(0.65 0.20 290 / 0.6)" />
+        <circle cx="50" cy="60" r="3" fill="oklch(0.65 0.20 290 / 0.8)" />
+        <circle cx="10" cy="85" r="2" fill="oklch(0.72 0.16 200 / 0.6)" />
+        <circle cx="10" cy="110" r="3" fill="oklch(0.72 0.16 200 / 0.8)" />
+        <circle cx="50" cy="135" r="2" fill="oklch(0.65 0.20 290 / 0.6)" />
+        <circle cx="50" cy="160" r="3" fill="oklch(0.65 0.20 290 / 0.8)" />
+        <circle cx="10" cy="185" r="2" fill="oklch(0.72 0.16 200 / 0.6)" />
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text" id="hero-text">
+        <h1 class="hero-name">
+          <span class="name-line" style="--delay:0.4s">PRASANNA</span>
+          <span class="name-line" style="--delay:0.5s">DEVIKA</span>
+          <span class="name-line" style="--delay:0.6s"></span>
+        </h1>
+        <div class="hero-tagline" style="--delay:0.8s">
+          <span class="tagline-dot">&bull;</span>
+          <span id="tagline-text">Biomedical Engineer</span>
+        </div>
+        <div class="hero-cta" style="--delay:1.15s">
+          <a href="#projects" class="btn-primary" id="btn-view-projects">View Projects</a>
+          <a href="CV.pdf" class="btn-ghost" download>
+            <i data-lucide="download" style="width:16px;height:16px;margin-right:8px"></i>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <i data-lucide="chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about-section reveal-section">
+    <div class="about-atmosphere" aria-hidden="true"></div>
+    <div class="about-grid">
+      <div class="about-left reveal-child" data-delay="0">
+        <div class="section-label-row">
+          <span class="label-line-el"></span>
+          <span class="section-label">WHO I AM</span>
+        </div>
+        <div class="about-heading">
+          <div class="heading-dim">ABOUT</div>
+          <div class="heading-bright">ME<span class="period-teal">.</span></div>
+        </div>
+        <p class="about-bio">
+          <span class="bio-first">I am a Biomedical Engineering graduate from Osmania University,
+            Hyderabad,</span>
+          with a genuine passion for healthcare, technology, and meaningful problem-solving.
+          Having qualified <strong>GATE BM in two consecutive years </strong>,
+          my experience across AI/ML research, medical device R&amp;D, pharmacogenomics, and full-stack web development
+          has grown organically, each project taught me something new and deepened my appreciation for
+          cross-disciplinary collaboration. I am looking for an environment where I can contribute honestly, keep
+          learning, and help build something that makes a real difference in people's lives.
+        </p>
+        <div class="identity-tags">
+          <span class="identity-tag">
+            <i data-lucide="map-pin" style="width:13px;height:13px;margin-right:4px"></i>
+            Hyderabad, India
+          </span>
+          <span class="identity-tag">
+            <i data-lucide="graduation-cap" style="width:13px;height:13px;margin-right:4px"></i>
+            UCE Osmania University
+          </span>
+          <span class="identity-tag">
+            <i data-lucide="calendar" style="width:13px;height:13px;margin-right:4px"></i>
+            2026 Batch
+          </span>
+        </div>
+        <a href="CV.pdf" class="about-cta" download>Read Full CV <span class="cta-arrow">&rarr;</span></a>
+      </div>
+
+      <div class="about-right reveal-child" data-delay="200">
+        <!-- ── Achievement Dashboard ── -->
+        <div class="abt-dashboard">
+
+          <!-- Row 1: GATE score cards -->
+          <div class="abt-row">
+            <!-- GATE 2025 Card -->
+            <div class="abt-card abt-gate abt-gate-25">
+              <div class="abt-card-header">
+                <span class="abt-card-chip">GATE BM 2025</span>
+                <i data-lucide="trophy" class="abt-trophy" style="width:14px;height:14px"></i>
+              </div>
+              <div class="abt-air-row">
+                <span class="abt-air-label">AIR</span>
+                <span class="abt-air-val anim-count" data-target="44" data-decimal="0">44</span>
+              </div>
+              <div class="abt-rank-bar">
+                <div class="abt-rank-fill abt-rf-teal" style="width:96%"></div>
+              </div>
+            </div>
+            <!-- GATE 2026 Card -->
+            <div class="abt-card abt-gate abt-gate-26">
+              <div class="abt-card-header">
+                <span class="abt-card-chip">GATE BM 2026</span>
+                <i data-lucide="medal" class="abt-medal" style="width:14px;height:14px"></i>
+              </div>
+              <div class="abt-air-row">
+                <span class="abt-air-label">AIR</span>
+                <span class="abt-air-val anim-count" data-target="171" data-decimal="0">171</span>
+              </div>
+              <div class="abt-rank-bar">
+                <div class="abt-rank-fill abt-rf-violet" style="width:82%"></div>
+              </div>
+              <div class="abt-card-sub">2nd Consecutive Year</div>
+            </div>
+          </div>
+
+          <!-- Row 2: CGPA arc + domain expertise chips -->
+          <div class="abt-row abt-row-mid">
+            <!-- CGPA radial arc -->
+            <div class="abt-card abt-cgpa-card">
+              <div class="abt-cgpa-arc-wrap">
+                <svg viewBox="0 0 100 58" class="abt-arc-svg">
+                  <defs>
+                    <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="oklch(0.72 0.16 200)" />
+                      <stop offset="100%" stop-color="oklch(0.65 0.20 290)" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M10,54 A42,42 0 0,1 90,54" fill="none" stroke="oklch(0.18 0 0)" stroke-width="9"
+                    stroke-linecap="round" />
+                  <path class="abt-arc-fill" d="M10,54 A42,42 0 0,1 90,54" fill="none" stroke="url(#arcGrad)"
+                    stroke-width="9" stroke-linecap="round" stroke-dasharray="132" stroke-dashoffset="132" />
+                </svg>
+                <div class="abt-arc-label">
+                  <span class="abt-arc-val anim-count" data-target="8.9" data-decimal="1">8.9</span>
+                  <span class="abt-arc-sub">/ 10 CGPA</span>
+                </div>
+              </div>
+              <div class="abt-card-sub" style="text-align:center;margin-top:4px">Osmania University</div>
+            </div>
+            <!-- Domain chips -->
+            <div class="abt-card abt-domains">
+              <div class="abt-domains-label">Expertise Areas</div>
+              <div class="abt-domain-chips">
+                <span class="abt-dchip" style="--dc:oklch(0.72 0.16 200)">AI / ML</span>
+                <span class="abt-dchip" style="--dc:oklch(0.68 0.18 10)">Biomedical Eng.</span>
+                <span class="abt-dchip" style="--dc:oklch(0.65 0.20 290)">Signal Processing</span>
+                <span class="abt-dchip" style="--dc:oklch(0.68 0.18 145)">Web Dev &amp; UI/UX</span>
+                <span class="abt-dchip" style="--dc:oklch(0.75 0.18 75)">Medical Devices</span>
+                <span class="abt-dchip" style="--dc:oklch(0.65 0.16 200)">Data Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="experience-section reveal-section">
+    <div class="exp-atmosphere" aria-hidden="true"></div>
+    <div class="exp-header">
+      <div class="exp-header-left">
+        <div class="section-label-row">
+          <span class="label-line-el"></span>
+          <span class="section-label">EXPERIENCE</span>
+        </div>
+        <div class="section-heading">
+          <div class="heading-dim">MY WORK</div>
+          <div class="heading-bright">HISTORY<span class="period-teal">.</span></div>
+        </div>
+      </div>
+      <div class="exp-nav-arrows">
+        <button class="exp-arrow" id="exp-prev" aria-label="Previous experience card">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="exp-arrow" id="exp-next" aria-label="Next experience card">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="timeline-rail-wrap" aria-hidden="true">
+      <div class="timeline-rail-line"></div>
+    </div>
+    <div class="exp-carousel" id="exp-carousel">
+      <div class="exp-card" style="--accent:oklch(0.65 0.20 290);--accent-bg:oklch(0.65 0.20 290 / 0.15)">
+        <div class="card-timeline-dot"></div>
+        <div class="card-date-badge">OCT 2025 &ndash; MAR 2026</div>
+        <div class="card-company">TECTUM TECHNOSPACE PVT. LTD.</div>
+        <h3 class="card-role">AI Research Intern</h3>
+        <span class="spec-badge">Pharmacogenomics</span>
+        <div class="card-divider-thin"></div>
+        <ul class="card-bullets">
+          <li>End-to-end ML data pipelines in Python for drug-gene datasets</li>
+          <li>NLP &amp; structured-data models for drug response prediction</li>
+          <li>Interactive dashboards for pharmacologists &amp; regulatory teams</li>
+        </ul>
+        <div class="card-tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span
+            class="tech-tag">PyTorch</span><span class="tech-tag">NLP</span>
+        </div>
+      </div>
+      <div class="exp-card" style="--accent:oklch(0.72 0.16 200);--accent-bg:oklch(0.72 0.16 200 / 0.15)">
+        <div class="card-prestige"><i data-lucide="star"
+            style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:4px"></i> IIT Madras
+        </div>
+        <div class="card-date-badge">JAN 2025 &ndash; PRESENT</div>
+        <div class="card-company">IIT MADRAS &middot; HTIC MEDTECH INCUBATOR</div>
+        <h3 class="card-role">Academic Intern &ndash; Medical Device R&D</h3>
+        <span class="spec-badge">MedTech &middot; Regulatory</span>
+        <div class="card-divider-thin"></div>
+        <ul class="card-bullets">
+          <li>Medical device R&D, testing &amp; validation at a MedTech incubator</li>
+          <li>Clinical user requirements &rarr; functional device specifications</li>
+          <li>CDSCO &amp; FDA regulatory frameworks</li>
+        </ul>
+        <div class="card-tech-tags">
+          <span class="tech-tag">MDR</span><span class="tech-tag">CDSCO</span><span class="tech-tag">FDA</span>
+        </div>
+      </div>
+      <div class="exp-card" style="--accent:oklch(0.68 0.15 165);--accent-bg:oklch(0.68 0.15 165 / 0.15)">
+        <div class="card-timeline-dot"></div>
+        <div class="card-date-badge">2025 &ndash; 2026</div>
+        <div class="card-company">INDEPENDENT PROJECTS</div>
+        <h3 class="card-role">Freelance Web Developer &amp; UI Designer</h3>
+        <span class="spec-badge">Full-Stack &middot; UI/UX</span>
+        <div class="card-divider-thin"></div>
+        <ul class="card-bullets">
+          <li>Built FASMI Biennial Meeting 2026 official conference website</li>
+          <li>Responsive front-end: HTML5, CSS3, JavaScript &mdash; live on GitHub Pages</li>
+          <li>Full project lifecycle: Figma wireframes &rarr; design &rarr; deployment</li>
+        </ul>
+        <div class="card-tech-tags">
+          <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JS</span><span
+            class="tech-tag">Figma</span><span class="tech-tag">GitHub Pages</span>
+        </div>
+        <a href="https://fasmimisi.github.io/fasmibiannualconf2026" class="card-ext-link" target="_blank">&#8599;
+          fasmimisi.github.io</a>
+      </div>
+      <div class="exp-card" style="--accent:oklch(0.72 0.16 65);--accent-bg:oklch(0.72 0.16 65 / 0.15)">
+        <div class="card-timeline-dot"></div>
+        <div class="card-date-badge">AUG &ndash; DEC 2024</div>
+        <div class="card-company">DEDROCK &ndash; THE UNIVERSE</div>
+        <h3 class="card-role">Graphic Designer</h3>
+        <span class="spec-badge">Branding &middot; Digital Assets</span>
+        <div class="card-divider-thin"></div>
+        <ul class="card-bullets">
+          <li>Digital &amp; print assets &mdash; banners, product listings, mockups</li>
+          <li>Adobe Illustrator, Photoshop &amp; Canva with visual consistency</li>
+          <li>Multiple concurrent projects under tight deadlines</li>
+        </ul>
+        <div class="card-tech-tags">
+          <span class="tech-tag">Illustrator</span><span class="tech-tag">Photoshop</span><span
+            class="tech-tag">Canva</span>
+        </div>
+      </div>
+      <div class="exp-card" style="--accent:oklch(0.65 0.18 10);--accent-bg:oklch(0.65 0.18 10 / 0.15)">
+        <div class="card-timeline-dot"></div>
+        <div class="card-date-badge">AUG &ndash; DEC 2024</div>
+        <div class="card-company">EVE PAPER &middot; REMOTE</div>
+        <h3 class="card-role">Research &amp; Promotion Intern</h3>
+        <span class="spec-badge">Data Collection &middot; Research</span>
+        <div class="card-divider-thin"></div>
+        <ul class="card-bullets">
+          <li>Python web scraping &amp; manual database navigation</li>
+          <li>Structured secondary research compiled into written reports</li>
+          <li>Concurrent workstreams with accurate, documented outputs</li>
+        </ul>
+        <div class="card-tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">Web Scraping</span><span class="tech-tag">Data
+            Research</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-progress-wrap">
+      <div class="exp-progress-bar" id="exp-progress-bar"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects-section reveal-section">
+    <div class="section-header-block">
+      <div class="section-label-row">
+        <span class="label-line-el"></span>
+        <span class="section-label">PROJECTS</span>
+        <span class="project-count-pill">02 Projects</span>
+      </div>
+      <div class="section-heading">
+        <div class="heading-dim">WHAT I</div>
+        <div class="heading-bright">BUILT<span class="period-teal">.</span></div>
+      </div>
+    </div>
+    <div class="bento-grid">
+      <div class="bento-card card-large" id="bento-card-1" style="--accent:oklch(0.72 0.16 200)">
+        <div class="card-visual-area visual-audiometer">
+          <div class="freq-labels-row" aria-hidden="true">
+            <span>250Hz</span><span>500Hz</span><span>1kHz</span><span>2kHz</span><span>4kHz</span><span>8kHz</span>
+          </div>
+          <svg class="waveform-vis" id="waveform-svg" viewBox="0 0 400 100" preserveAspectRatio="none"
+            aria-hidden="true">
+            <defs>
+              <filter id="waveGlow">
+                <feGaussianBlur stdDeviation="3" result="b" />
+                <feMerge>
+                  <feMergeNode in="b" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path id="waveform-path" stroke="oklch(0.72 0.16 200)" stroke-width="2" fill="none"
+              filter="url(#waveGlow)" />
+          </svg>
+        </div>
+        <div class="card-body-area">
+          <div class="proj-watermark">01</div>
+          <div class="cat-badges">
+            <span class="cat-badge">HARDWARE</span><span class="cat-badge">MEDICAL DEVICE</span>
+          </div>
+          <h3 class="proj-title-lg">Raspberry Pi-Based Portable Audiometer</h3>
+          <p class="proj-desc">Designed, built, and validated a portable clinical-grade audiometer addressing accessible
+            hearing diagnostics for paediatric and multilingual populations outside traditional clinical environments.
+          </p>
+          <div class="feature-chips">
+            <span class="feat-chip"> Clinical-Grade</span>
+            <span class="feat-chip"> Paediatric Focus</span>
+            <span class="feat-chip"> PTA &amp; Speech Audiometry</span>
+          </div>
+          <div class="card-tech-tags">
+            <span class="tech-tag">Python</span><span class="tech-tag">Raspberry Pi</span><span class="tech-tag">Signal
+              Processing</span><span class="tech-tag">Embedded Systems</span>
+          </div>
+          <div class="card-actions-row">
+            <a href="https://github.com/prasanna0810/Raspberry-Pi-based-portable-audiometer" target="_blank"
+              class="card-action-link">&#8599; View on GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="bento-right">
+        <div class="bento-card card-small" id="bento-card-2" style="--accent:oklch(0.65 0.20 290)">
+          <div class="card-visual-area visual-ai" style="height:160px;">
+            <div class="neural-nodes-demo" id="neural-demo" aria-hidden="true"></div>
+            <div class="ai-hud-wrap" aria-hidden="true">
+              <div class="hud-grid"></div>
+              <div class="scanning-laser"></div>
+              <div class="hud-target target-1" style="top: 20%; left: 15%; width: 35px; height: 35px;">
+                <div class="hud-corner tl"></div>
+                <div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div>
+                <div class="hud-corner br"></div>
+                <div class="hud-label">RESISTOR_72</div>
+              </div>
+              <div class="hud-target target-2" style="top: 50%; left: 50%; width: 45px; height: 45px;">
+                <div class="hud-corner tl"></div>
+                <div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div>
+                <div class="hud-corner br"></div>
+                <div class="hud-label">IC_CHIP</div>
+              </div>
+              <div class="hud-target target-3" style="bottom: 15%; right: 15%; width: 38px; height: 38px;">
+                <div class="hud-corner tl"></div>
+                <div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div>
+                <div class="hud-corner br"></div>
+                <div class="hud-label">CAPACITOR</div>
+              </div>
+              <div class="hud-data-readout">CONFIDENCE: 98.4%</div>
+            </div>
+          </div>
+          <div class="card-body-area">
+            <div class="proj-watermark">02</div>
+            <div class="cat-badges">
+              <span class="cat-badge">AI</span><span class="cat-badge">COMPUTER VISION</span>
+            </div>
+            <h3 class="proj-title-sm">AI-Powered Electronic Component Detection</h3>
+            <p class="proj-desc">Engineering a deep learning classification system (TensorFlow/PyTorch) to automate
+              identification, replacing manual workflows with an AI-driven pipeline integrated into a live lab platform.
+            </p>
+            <div class="card-tech-tags">
+              <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span
+                class="tech-tag">Flask</span><span class="tech-tag">Computer Vision</span><span class="tech-tag">REST
+                API</span>
+            </div>
+            <a href="https://github.com/prasanna0810/AI-Electronic-Components-Identification" target="_blank"
+              class="card-action-link" style="margin-top:10px">&#8599; View on GitHub</a>
+          </div>
+        </div>
+        <div class="bento-card card-coming-soon">
+          <div class="cs-plus">+</div>
+          <div class="cs-title">More Projects</div>
+          <div class="cs-sub">Currently in development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FREELANCE ===== -->
+  <section id="freelance" class="freelance-section reveal-section">
+    <div class="fl-glow-left" aria-hidden="true"></div>
+    <div class="fl-glow-right" aria-hidden="true"></div>
+    <div class="fl-dot-grid" aria-hidden="true"></div>
+    <div class="fl-layout">
+      <div class="fl-mockup-col">
+        <div class="browser-frame" id="browser-frame">
+          <div class="browser-chrome-bar">
+            <div class="browser-dots-row"><span></span><span></span><span></span></div>
+            <div class="browser-url-bar">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+              fasmimisi.github.io/fasmibiannualconf2026
+            </div>
+          </div>
+          <div class="browser-viewport">
+            <div class="bv-navbar"></div>
+            <div class="bv-hero">
+              <div class="bv-line w80"></div>
+              <div class="bv-line w50"></div>
+            </div>
+            <div class="bv-cards">
+              <div class="bv-card"></div>
+              <div class="bv-card"></div>
+              <div class="bv-card"></div>
+            </div>
+          </div>
+          <div class="live-indicator">
+            <span class="live-pulse-dot"></span>
+            <span class="live-label">LIVE</span>
+          </div>
+          <div class="fl-floating-item fl-floating-code" aria-hidden="true">
+            <div class="fl-f-title">CSS</div>
+            <code
+              class="fl-f-snippet">.fasmi-conf {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;backdrop-filter: blur(12px);<br>}</code>
+          </div>
+          <div class="fl-floating-item fl-floating-palette" aria-hidden="true">
+            <div class="fl-f-title">COLORS</div>
+            <div class="fl-f-colors">
+              <span style="background: oklch(0.72 0.16 200)"></span>
+              <span style="background: oklch(0.65 0.20 290)"></span>
+              <span style="background: #fff"></span>
+            </div>
+          </div>
+          <svg class="fl-cursor" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M5.65376 12.3822L15.341 19.3517C15.9388 19.7818 16.7821 19.3533 16.7821 18.6083V5.39169C16.7821 4.64673 15.9388 4.21822 15.341 4.64831L5.65376 11.6178C5.22826 11.9239 5.22826 12.0761 5.65376 12.3822Z"
+              fill="white" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+      </div>
+      <div class="fl-content-col">
+        <div class="section-label-row">
+          <span class="label-line-el"></span>
+          <span class="section-label">FREELANCE</span>
+        </div>
+        <div class="fasmi-title">
+          <div class="fasmi-line fasmi-white">WEB</div>
+          <div class="fasmi-line fasmi-gray1">DEVELOPER</div>
+          <div class="fasmi-line fasmi-gray2">&amp; UI</div>
+          <div class="fasmi-line fasmi-accent">DESIGNER<span class="period-teal">.</span></div>
+        </div>
+        <p class="fl-sub">FASMI BIENNIAL MEETING 2026.</p>
+        <p class="fl-desc">Designed and developed the official website for the FASMI Biennial Meeting 2026 &mdash; an
+          international, Asia-focused molecular imaging conference bringing together global experts, innovators,
+          clinicians, and industry leaders in Hyderabad.</p>
+        <ul class="fl-bullets">
+
+          <li><span class="diamond">&#9670;</span> Responsive front-end: HTML5, CSS3, JavaScript across all devices</li>
+          <li><span class="diamond">&#9670;</span> UI/UX principles: information architecture, visual hierarchy,
+            accessibility
+          </li>
+          <li><span class="diamond">&#9670;</span> Live on GitHub Pages &mdash; serving an international scientific
+            audience
+          </li>
+        </ul>
+        <div class="fl-meta-row">
+          <div class="fl-meta-item">
+            <div class="fl-meta-label">Role</div>
+            <div class="fl-meta-val">Web Dev + Design</div>
+          </div>
+          <div class="fl-meta-div"></div>
+          <div class="fl-meta-item">
+            <div class="fl-meta-label">Stack</div>
+            <div class="fl-meta-val">HTML &middot; CSS &middot; JS</div>
+          </div>
+          <div class="fl-meta-div"></div>
+          <div class="fl-meta-item">
+            <div class="fl-meta-label">Status</div>
+            <div class="fl-meta-val fl-live"><span class="live-dot-sm"></span> Live &#8599;</div>
+          </div>
+        </div>
+        <div class="card-tech-tags fl-tags">
+          <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span
+            class="tech-tag">JavaScript</span><span class="tech-tag">Figma</span><span class="tech-tag">GitHub
+            Pages</span><span class="tech-tag">Responsive Design</span><span class="tech-tag">UI/UX</span>
+        </div>
+        <div class="fl-cta-row">
+          <a href="https://fasmimisi.github.io/fasmibiannualconf2026" target="_blank" class="btn-primary">Visit Live
+            Site &#8599;</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="skills-section reveal-section">
+    <div class="skills-glow-center" aria-hidden="true"></div>
+    <div class="skills-top-row">
+      <div>
+        <div class="section-label-row">
+          <span class="label-line-el"></span>
+          <span class="section-label">SKILLS</span>
+        </div>
+        <div class="section-heading">
+          <div class="heading-dim">Technical & Domain</div>
+          <div class="heading-bright">Skills<span class="period-teal">.</span></div>
+        </div>
+      </div>
+      <div class="view-toggle-group" role="group" aria-label="Skills view">
+        <button class="toggle-pill active" id="btn-galaxy" data-view="galaxy">&#10036; Synapse Network</button>
+        <button class="toggle-pill" id="btn-grid" data-view="grid">&#8862; Grid</button>
+      </div>
+    </div>
+
+    <!-- Neural Architecture View -->
+    <div class="neural-view" id="neural-view">
+      <div class="neural-wrap">
+        <canvas id="neural-canvas" width="900" height="520"
+          aria-label="Interactive neural skills architecture"></canvas>
+        <div class="neural-center-core" id="neural-core">CORE</div>
+      </div>
+    </div>
+
+    <!-- Grid View -->
+    <div class="grid-view" id="grid-view" style="display:none">
+      <div class="skills-panels-grid">
+        <div class="skill-panel" style="--ph:200">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+            <span class="panel-name">Programming</span><span class="panel-cnt">6</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">Python</span><span class="sk">C</span><span class="sk">JavaScript</span><span
+              class="sk">HTML5</span><span class="sk">CSS3</span><span class="sk">SQL</span>
+          </div>
+        </div>
+        <div class="skill-panel panel-wide" style="--ph:290">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a2 2 0 012 2v2a2 2 0 01-2 2 2 2 0 01-2-2V4a2 2 0 012-2z" />
+              <path
+                d="M12 16a2 2 0 012 2v2a2 2 0 01-2 2 2 2 0 01-2-2v-2a2 2 0 012-2zm-7-7a2 2 0 012 2 2 2 0 01-2 2 2 2 0 01-2-2 2 2 0 012-2zm14 0a2 2 0 012 2 2 2 0 01-2 2 2 2 0 01-2-2 2 2 0 012-2z" />
+            </svg>
+            <span class="panel-name">AI / ML</span><span class="panel-cnt">13</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">TensorFlow</span><span class="sk">PyTorch</span><span class="sk">Scikit-learn</span><span
+              class="sk">Pandas</span><span class="sk">NumPy</span><span class="sk">Matplotlib</span><span
+              class="sk">NLP</span><span class="sk">Computer Vision</span><span class="sk">Deep Learning</span><span
+              class="sk">Data Pipelines</span><span class="sk">SHAP</span><span class="sk">Jupyter</span><span
+              class="sk">Google Colab</span>
+          </div>
+        </div>
+        <div class="skill-panel" style="--ph:165">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg>
+            <span class="panel-name">Web &amp; APIs</span><span class="panel-cnt">7</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">Flask (REST)</span><span class="sk">Responsive Web Design</span><span class="sk">GitHub
+              Pages</span><span class="sk">Netlify</span><span class="sk">Git/GitHub</span><span
+              class="sk">Figma</span><span class="sk">HTML/CSS/JS</span>
+          </div>
+        </div>
+        <div class="skill-panel panel-wide biomedical-panel" style="--ph:10">
+          <div class="ecg-wm" aria-hidden="true"><svg viewBox="0 0 500 60" fill="none" stroke="currentColor"
+              stroke-width="1">
+              <path
+                d="M0,30 L80,30 L100,5 L120,55 L140,30 L220,30 L240,12 L260,48 L280,30 L360,30 L380,8 L400,52 L420,30 L500,30" />
+            </svg></div>
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+            <span class="panel-name">Biomedical</span><span class="panel-cnt">6</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">Medical Imaging (MRI, CT, US)</span><span class="sk">Electrophysiology</span><span
+              class="sk">Signal Processing</span><span class="sk">FDA 510(k)/PMA</span><span
+              class="sk">MDR/CDSCO</span><span class="sk">Clinical Research</span>
+          </div>
+        </div>
+        <div class="skill-panel" style="--ph:65">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+            <span class="panel-name">Equipment</span><span class="panel-cnt">8</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">Patient Monitor</span><span class="sk">Infusion Pump</span><span
+              class="sk">Audiometer</span><span class="sk">Diathermy</span><span class="sk">ESU</span><span
+              class="sk">Anesthesia Machine</span><span class="sk">Ventilator</span><span class="sk">Multi-Channel
+              DAQ</span>
+          </div>
+        </div>
+        <div class="skill-panel" style="--ph:340">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 19l7-7 3 3-7 7-3-3z" />
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+              <circle cx="11" cy="11" r="2" />
+            </svg>
+            <span class="panel-name">Design</span><span class="panel-cnt">4</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">Figma</span><span class="sk">Adobe Illustrator</span><span class="sk">Adobe
+              Photoshop</span><span class="sk">Canva</span>
+          </div>
+        </div>
+        <div class="skill-panel" style="--ph:50">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <rect x="9" y="9" width="6" height="6" />
+              <line x1="9" y1="1" x2="9" y2="4" />
+              <line x1="15" y1="1" x2="15" y2="4" />
+              <line x1="9" y1="20" x2="9" y2="23" />
+              <line x1="15" y1="20" x2="15" y2="23" />
+              <line x1="20" y1="9" x2="23" y2="9" />
+              <line x1="20" y1="14" x2="23" y2="14" />
+              <line x1="1" y1="9" x2="4" y2="9" />
+              <line x1="1" y1="14" x2="4" y2="14" />
+            </svg>
+            <span class="panel-name">IoT</span><span class="panel-cnt">5</span>
+          </div>
+          <div class="skill-tags-flex">
+            <span class="sk">Arduino</span><span class="sk">ESP32</span><span class="sk">Raspberry Pi</span><span
+              class="sk">Embedded Systems</span><span class="sk">Sensor Integration</span>
+          </div>
+        </div>
+        <div class="skill-panel" style="--ph:80">
+          <div class="skill-panel-head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span class="panel-name">Languages &amp; Soft Skills</span><span class="panel-cnt">9</span>
+          </div>
+          <div class="skill-tags-flex">
+            <div class="sk-sublabel">Languages</div>
+            <span class="sk">English (Fluent)</span><span class="sk">Telugu (Native)</span><span class="sk">Hindi
+              (Proficient)</span>
+            <div class="sk-sublabel">Soft Skills</div>
+            <span class="sk">Analytical Thinking</span><span class="sk">Critical Reasoning</span><span
+              class="sk">Technical Communication</span><span class="sk">Attention to Detail</span><span
+              class="sk">Self-motivation</span><span class="sk">Cross-functional Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS & CERTIFICATIONS ===== -->
+  <section id="certifications" class="achievements-section reveal-section">
+    <div class="ach-glow-left" aria-hidden="true"></div>
+    <div class="ach-glow-right" aria-hidden="true"></div>
+    <div class="section-label-row">
+      <span class="label-line-el"></span>
+      <span class="section-label">ACHIEVEMENTS</span>
+    </div>
+    <div class="section-heading">
+      <div class="heading-bright">GATE RANKS<span class="period-teal">.</span></div>
+    </div>
+
+    <!-- GATE Cards -->
+    <div class="gate-grid">
+      <div class="gate-card" id="gate-card-1">
+        <div class="gate-hero-row">
+          <div>
+            <div class="gate-air-tag">AIR</div>
+            <div class="gate-rank-num anim-count" data-target="44" data-decimal="0">44</div>
+          </div>
+          <svg class="gate-trophy-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5">
+            <path d="M6 9H4.5a2.5 2.5 0 010-5H6" />
+            <path d="M18 9h1.5a2.5 2.5 0 000-5H18" />
+            <path d="M4 22h16M12 17v5M8 17a4 4 0 01-4-4V5h16v8a4 4 0 01-4 4H8z" />
+          </svg>
+        </div>
+        <div class="gate-sep"></div>
+        <div class="gate-exam-name">GATE BM 2025</div>
+        <a href="gate_25.pdf" class="gate-dl-link" download>&darr; Download Certificate</a>
+      </div>
+
+
+
+      <div class="gate-card" id="gate-card-2">
+        <div class="gate-hero-row">
+          <div>
+            <div class="gate-air-tag">AIR</div>
+            <div class="gate-rank-num anim-count" data-target="171" data-decimal="0">171</div>
+          </div>
+          <svg class="gate-trophy-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5">
+            <path d="M6 9H4.5a2.5 2.5 0 010-5H6" />
+            <path d="M18 9h1.5a2.5 2.5 0 000-5H18" />
+            <path d="M4 22h16M12 17v5M8 17a4 4 0 01-4-4V5h16v8a4 4 0 01-4 4H8z" />
+          </svg>
+        </div>
+        <div class="gate-sep"></div>
+        <div class="gate-exam-name">GATE BM 2026</div>
+        <a href="GATE_26.pdf" class="gate-dl-link" download>&darr; Download Certificate</a>
+      </div>
+    </div>
+
+    <!-- Certifications Zone -->
+    <div class="certs-zone">
+      <div class="certs-header-row">
+        <div class="section-label-row">
+          <span class="label-line-el"></span>
+          <span class="section-label">CERTIFICATIONS</span>
+          <span class="cert-count-pill">16 Certifications</span>
+        </div>
+        <div class="cert-filter-row">
+          <button class="cert-tab active" data-filter="all">All</button>
+          <button class="cert-tab" data-filter="NPTEL">NPTEL</button>
+          <button class="cert-tab" data-filter="Infosys">Infosys</button>
+          <button class="cert-tab" data-filter="Google">Google</button>
+          <button class="cert-tab" data-filter="Others">Others</button>
+        </div>
+      </div>
+      <div class="cert-grid" id="cert-grid"></div>
+      <button class="show-all-btn" id="show-all-btn">Show All 16 Certifications &darr;</button>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="education-section reveal-section">
+    <div class="edu-canyon-l" aria-hidden="true"></div>
+    <div class="edu-canyon-r" aria-hidden="true"></div>
+    <div class="section-label-row">
+      <span class="label-line-el"></span>
+      <span class="section-label">EDUCATION</span>
+    </div>
+    <div class="edu-heading">
+      <div class="edu-h-far">MY</div>
+      <div class="edu-h-mid">ACADEMIC</div>
+      <div class="heading-bright">JOURNEY<span class="period-teal">.</span></div>
+    </div>
+
+    <div class="edu-timeline-wrap">
+      <div class="edu-spine-wrap" aria-hidden="true">
+        <div class="edu-spine-line"></div>
+        <div class="edu-spine-glow"></div>
+        <div class="edu-light-pulse" id="edu-pulse"></div>
+      </div>
+
+      <!-- Node 1 -->
+      <div class="edu-row edu-right">
+        <div class="edu-node-wrap">
+          <div class="edu-node-core"></div>
+          <div class="edu-node-ring"></div>
+          <div class="edu-node-h-connector"></div>
+        </div>
+        <div class="edu-card edu-card-hero">
+          <div class="edu-card-top-row">
+            <span class="edu-year-badge">2022 &ndash; 2026</span>
+            <span class="edu-pursuing-tag">PURSUING &middot; 2026 BATCH</span>
+          </div>
+          <div class="edu-inst-name">University College of Engineering</div>
+          <div class="edu-uni-sub">Osmania University, Hyderabad</div>
+          <div class="edu-sep"></div>
+          <div class="edu-degree-row">Bachelor of Engineering &mdash; <span class="edu-spec-highlight">Biomedical
+              Engineering</span></div>
+          <div class="edu-dur">November 2022 &ndash; May 2026</div>
+          <div class="edu-course-tags">
+            <span class="course-tag">Biomedical Instrumentation</span>
+            <span class="course-tag">Medical Imaging</span>
+            <span class="course-tag">Signal Processing</span>
+            <span class="course-tag">AI/ML</span>
+            <span class="course-tag">Medical Device Regulation</span>
+            <span class="course-tag">IoT in Healthcare</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node 2 -->
+      <div class="edu-row edu-left">
+        <div class="edu-card edu-card-mid">
+          <div class="edu-card-top-row">
+            <span class="edu-year-badge edu-badge-muted">2022</span>
+          </div>
+          <div class="edu-inst-name">DAV Public School</div>
+          <div class="edu-uni-sub">Hyderabad, India</div>
+          <div class="edu-sep"></div>
+          <div class="edu-degree-row">12th Standard &mdash; Science (PCM)</div>
+          <div class="grade-block">
+            <div class="grade-num anim-count" data-target="84" data-decimal="0" data-suffix="%">84%</div>
+            <div class="grade-sub">Board Grade</div>
+          </div>
+        </div>
+        <div class="edu-node-wrap edu-node-left">
+          <div class="edu-node-core"></div>
+          <div class="edu-node-ring"></div>
+          <div class="edu-node-h-connector edu-h-conn-left"></div>
+        </div>
+      </div>
+
+      <!-- Node 3 -->
+      <div class="edu-row edu-right">
+        <div class="edu-node-wrap">
+          <div class="edu-node-core node-dim"></div>
+          <div class="edu-node-ring node-ring-dim"></div>
+          <div class="edu-node-h-connector"></div>
+        </div>
+        <div class="edu-card edu-card-compact">
+          <div class="edu-card-top-row">
+            <span class="edu-year-badge edu-badge-dim">2018</span>
+          </div>
+          <div class="edu-inst-name edu-inst-dim">Mount Litera Zee School</div>
+          <div class="edu-degree-row edu-degree-dim">10th Standard</div>
+          <div class="grade-block">
+            <div class="grade-num grade-dim anim-count" data-target="94.6" data-decimal="1" data-suffix="%">94.6%</div>
+            <div class="grade-sub">Board Grade</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-spine-end" aria-hidden="true">&#9660;</div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact-section reveal-section">
+    <div class="ct-glow-l" aria-hidden="true"></div>
+    <div class="ct-glow-r" aria-hidden="true"></div>
+    <div class="ai-robot-wrap" aria-hidden="true" id="ai-robot">
+      <svg class="robot-svg" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+        <!-- Floating Head -->
+        <g class="rob-head">
+          <path d="M30,30 Q30,15 50,15 Q70,15 70,30 L70,45 Q70,55 50,55 Q30,55 30,45 Z" fill="oklch(0.85 0 0 / 0.9)" />
+          <!-- Optic Visor -->
+          <rect x="35" y="28" width="30" height="8" rx="4" fill="oklch(0.2 0 0 / 0.8)" />
+          <ellipse class="rob-eye" cx="50" cy="32" rx="4" ry="1.5" fill="var(--color-primary)" />
+        </g>
+        <!-- Floating Torso -->
+        <g class="rob-body">
+          <rect x="25" y="65" width="50" height="50" rx="12" fill="oklch(0.78 0 0 / 0.9)" />
+          <!-- Intelligence Core -->
+          <circle cx="50" cy="90" r="10" fill="var(--color-primary)" opacity="0.3">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="50" cy="90" r="4" fill="var(--color-primary)" />
+        </g>
+        <!-- Floating Limbs -->
+        <rect class="rob-limb" x="12" y="75" width="8" height="25" rx="4" fill="oklch(0.7 0 0 / 0.8)" />
+        <rect class="rob-limb" x="80" y="75" width="8" height="25" rx="4" fill="oklch(0.7 0 0 / 0.8)" />
+      </svg>
+    </div>
+
+    <div class="ct-headline-zone">
+      <div class="section-label-centered">
+        <span class="label-line-el"></span>
+        <span class="section-label">CONTACT</span>
+        <span class="label-line-el"></span>
+      </div>
+      <div class="ct-heading">
+        <div class="ct-h1">LET'S</div>
+        <div class="ct-h2">BUILD SOMETHING</div>
+        <div class="ct-h3">THAT MATTERS<span class="period-teal">.</span></div>
+      </div>
+      <p class="ct-sub">Open to research collaborations, full-time roles, freelance projects &amp; academic
+        opportunities.</p>
+    </div>
+
+    <div class="ct-contact-grid">
+
+      <div class="ct-item ct-email-item" id="ct-email" tabindex="0" role="button" aria-label="Copy email address">
+        <div class="ct-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg></div>
+        <span class="ct-text">prasannadevika0810@gmail.com</span>
+        <span class="ct-arrow">&rarr;</span>
+      </div>
+
+
+    </div>
+
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/prasanna-devika-8199a7273" target="_blank" class="social-pill"
+        style="--brand:oklch(0.55 0.18 240)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/prasanna0810" target="_blank" class="social-pill" style="--brand:oklch(0.85 0 0)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+        </svg>
+        GitHub
+      </a>
+      <a href="https://www.kaggle.com/prasannadevika" target="_blank" class="social-pill"
+        style="--brand:oklch(0.62 0.16 220)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.336" />
+        </svg>
+        Kaggle
+      </a>
+
+    </div>
+    <div class="copied-toast" id="copied-toast" aria-live="polite">Copied!</div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-divider-line" aria-hidden="true"></div>
+    <div class="footer-row">
+      <div class="footer-copy">&copy; 2026 <span class="footer-name-hl">Prasanna Devika </span></div>
+      <a href="#hero" class="footer-logo-mark" aria-label="Back to top">
+        <svg width="36" height="22" viewBox="0 0 44 28" fill="none"><text x="0" y="26"
+            font-family="'Bebas Neue',sans-serif" font-size="30" fill="currentColor"></text></svg>
+      </a>
+      <div class="footer-tagline">Designed &amp; Developed by <span class="footer-name-hl">Prasanna Devika </span>
+      </div>
+    </div>
+    <div class="footer-tech-note">Built with HTML &middot; CSS &middot; JavaScript &mdash; Deployed on GitHub Pages
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="btt-btn" id="btt-btn" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+    Top
+  </button>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
